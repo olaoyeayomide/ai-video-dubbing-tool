@@ -1,0 +1,249 @@
+/* Voice Management UI Styles */
+
+.voice-management-ui {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+  margin-right: 5px;
+  font-weight: 500;
+}
+
+.tab-btn.active {
+  background: #007bff;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  background: #fff;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content.active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Action Bar */
+.action-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.primary-btn {
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.primary-btn:hover {
+  background: #0069d9;
+}
+
+/* Lists */
+.actors-list, .voices-list, .speakers-list {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.actor-item, .voice-item, .speaker-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.actor-item:hover, .voice-item:hover, .speaker-item:hover {
+  background: #f9f9f9;
+}
+
+.actor-item.selected, .voice-item.selected, .speaker-item.selected {
+  background: #e6f2ff;
+  border-color: #007bff;
+}
+
+/* Details Panels */
+.actor-detail, .voice-detail, .speaker-detail {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+/* Voice Categories */
+.category-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #555;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.category-voices {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.checkbox-list {
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.checkbox-list label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.hint {
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 20px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4CAF50;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* Voice Preview */
+.voice-preview {
+  margin-top: 15px;
+}
+
+#preview-audio-container {
+  margin-top: 10px;
+}
+
+.preview-btn {
+  padding: 6px 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.preview-btn:hover {
+  background: #218838;
+}
+
+/* Error and Status Messages */
+.error {
+  color: #dc3545;
+}
+
+#clone-status {
+  margin-top: 5px;
+  font-style: italic;
+  color: #666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .tab-content.active {
+    flex-direction: column;
+  }
+  
+  .category-voices {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-content {
+    width: 90%;
+    margin: 15% auto;
+  }
+}

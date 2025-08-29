@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Management Test</title>
+    <link rel="stylesheet" href="./static/css/main.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="max-w-7xl mx-auto py-6 px-4">
+        <h1 class="text-2xl font-bold mb-6">Tailwind CSS Migration Test</h1>
+        
+        <!-- Test basic styles -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="card">
+                <h2 class="text-lg font-semibold mb-4">Test Card</h2>
+                <p class="text-gray-600">This card uses the custom .card component from Tailwind.</p>
+                <button class="btn-primary mt-4">Primary Button</button>
+                <button class="btn-secondary mt-4 ml-2">Secondary Button</button>
+            </div>
+            
+            <div class="card">
+                <h2 class="text-lg font-semibold mb-4">Form Test</h2>
+                <label class="form-label">Test Input:</label>
+                <input type="text" class="form-input mb-4" placeholder="Enter text here">
+                
+                <label class="form-label">Test Select:</label>
+                <select class="form-input">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Test tabs -->
+        <div class="card">
+            <h2 class="text-lg font-semibold mb-4">Tab Test</h2>
+            <div class="border-b border-gray-200 mb-4">
+                <nav class="flex space-x-8">
+                    <button class="tab-button tab-button-active">Active Tab</button>
+                    <button class="tab-button">Inactive Tab</button>
+                    <button class="tab-button">Another Tab</button>
+                </nav>
+            </div>
+            <p class="text-gray-600">Tab content would go here.</p>
+        </div>
+        
+        <!-- Test modal structure -->
+        <div class="card mt-6">
+            <h2 class="text-lg font-semibold mb-4">Modal Test (Hidden)</h2>
+            <button onclick="document.getElementById('test-modal').classList.remove('hidden')" class="btn-primary">Show Modal</button>
+        </div>
+        
+        <!-- Test modal -->
+        <div class="modal-overlay hidden" id="test-modal">
+            <div class="modal-content">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-semibold">Test Modal</h3>
+                    <button onclick="document.getElementById('test-modal').classList.add('hidden')" class="text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+                </div>
+                <p class="mb-4">This modal tests the Tailwind CSS styling.</p>
+                <div class="flex justify-end">
+                    <button onclick="document.getElementById('test-modal').classList.add('hidden')" class="btn-primary">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

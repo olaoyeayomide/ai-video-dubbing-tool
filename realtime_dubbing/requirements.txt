@@ -1,0 +1,46 @@
+# Core web framework
+fastapi==0.116.1
+uvicorn==0.35.0
+websockets==15.0.1
+
+# Audio processing
+librosa==0.11.0
+soundfile==0.12.1
+numpy==2.2.6
+scipy==1.16.1
+
+# Machine learning
+scikit-learn==1.6.0
+
+# Local Whisper speech recognition (completely free)
+openai-whisper==20231117
+ffmpeg-python==0.2.0
+
+# Speaker diarization and audio processing
+pyannote-audio==3.3.1
+torch==2.5.1
+torchaudio==2.5.1
+
+# ElevenLabs voice synthesis
+elevenlabs==2.9.2
+
+# HTTP client
+aiohttp==3.11.11
+
+# Configuration management
+pydantic-settings==2.7.0
+pydantic==2.9.1
+
+# Data persistence
+redis==6.4.0
+pickle-mixin==1.0.2
+
+# Development and testing
+pytest==8.3.4
+pytest-asyncio==0.25.0
+
+# Environment management
+python-dotenv==1.0.1
+
+# File uploads
+python-multipart==0.0.17

@@ -1,0 +1,20 @@
+{
+  "name": "realtime_dubbing",
+  "version": "1.0.0",
+  "description": "A powerful real-time AI dubbing system that automatically translates and voices foreign-language content into your preferred language with voice preservation.",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss -i ./static/css/tailwind-input.css -o ./static/css/main.css --watch",
+    "build-css-prod": "tailwindcss -i ./static/css/tailwind-input.css -o ./static/css/main.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.12"
+  }
+}

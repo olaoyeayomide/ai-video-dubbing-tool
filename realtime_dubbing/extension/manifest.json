@@ -1,0 +1,65 @@
+{
+  "manifest_version": 3,
+  "name": "RealTime AI Dubbing",
+  "version": "1.0.0",
+  "description": "Real-time AI dubbing for streaming content - watch foreign movies and anime in your preferred language",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "https://www.netflix.com/*",
+    "https://www.youtube.com/*",
+    "https://www.crunchyroll.com/*",
+    "https://www.hulu.com/*",
+    "https://www.disneyplus.com/*",
+    "https://www.amazon.com/*",
+    "https://www.funimation.com/*",
+    "https://www.hbo.com/*",
+    "https://www.twitch.tv/*",
+    "http://localhost:8000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.netflix.com/*",
+        "https://www.youtube.com/*",
+        "https://www.crunchyroll.com/*",
+        "https://www.hulu.com/*",
+        "https://www.disneyplus.com/*",
+        "https://www.amazon.com/*",
+        "https://www.funimation.com/*",
+        "https://www.hbo.com/*",
+        "https://www.twitch.tv/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "RealTime AI Dubbing",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js", "audio-processor.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
